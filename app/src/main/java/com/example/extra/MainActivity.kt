@@ -8,7 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.example.extra.ui.theme.ExtraTheme
-import com.example.extra.ui.theme.home
+import com.example.mywishlist.ui.theme.MyNavigation
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +23,8 @@ class MainActivity : ComponentActivity() {
 //                    start()
 //                    login()
 //                    gender()
-                    home()
+//                    home()
+                    MyNavigation()
                 }
             }
         }

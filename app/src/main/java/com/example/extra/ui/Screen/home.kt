@@ -1,7 +1,8 @@
-package com.example.extra.ui.theme
+package com.example.extra.ui.Screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -19,7 +20,9 @@ import androidx.compose.ui.unit.sp
 import com.example.extra.R
 
 @Composable
-fun home() {
+fun home(
+    navigateToNext: () -> Unit
+) {
     Box(modifier = Modifier.background(Color.Black))
     {
         Column {
@@ -36,7 +39,8 @@ fun home() {
                 modifier = Modifier.padding(10.dp, 0.dp)
             )
             Column {
-                Card(modifier = Modifier.padding(horizontal = 15.dp, vertical = 20.dp))
+                Card(modifier = Modifier.padding(horizontal = 15.dp, vertical = 20.dp)
+                    .clickable(onClick = navigateToNext))
                 {
                     Row {
                         Text(
@@ -52,7 +56,7 @@ fun home() {
                         )
                     }
                 }
-                Card(modifier = Modifier.padding(horizontal = 15.dp, vertical = 0.dp))
+                Card(modifier = Modifier.padding(horizontal = 15.dp, vertical = 0.dp).clickable(onClick = navigateToNext))
                 {
                     Row {
                         Text(
@@ -69,7 +73,7 @@ fun home() {
                     }
                 }
                 Row(modifier = Modifier.padding(7.dp, 0.dp)) {
-                    Card(modifier = Modifier.padding(10.dp, 20.dp, 0.dp, 0.dp)) {
+                    Card(modifier = Modifier.padding(10.dp, 20.dp, 0.dp, 0.dp).clickable(onClick = navigateToNext)) {
                         Image(
                             painter = painterResource(id = R.drawable.dumbbel),
                             contentDescription = null,
@@ -82,7 +86,7 @@ fun home() {
                                 .padding(60.dp, 5.dp)
                         )
                     }
-                    Card(modifier = Modifier.padding(20.dp, 20.dp, 0.dp, 0.dp)) {
+                    Card(modifier = Modifier.padding(20.dp, 20.dp, 0.dp, 0.dp).clickable(onClick = navigateToNext)) {
                         Image(
                             painter = painterResource(id = R.drawable.yoga),
                             contentDescription = null,
@@ -98,7 +102,7 @@ fun home() {
 
                 }
                 Row(modifier = Modifier.padding(7.dp, 0.dp)) {
-                    Card(modifier = Modifier.padding(10.dp, 20.dp, 0.dp, 0.dp)) {
+                    Card(modifier = Modifier.padding(10.dp, 20.dp, 0.dp, 0.dp).clickable(onClick = navigateToNext)) {
                         Image(
                             painter = painterResource(id = R.drawable.focus),
                             contentDescription = null,
@@ -111,7 +115,7 @@ fun home() {
                                 .padding(72.dp, 5.dp)
                         )
                     }
-                    Card(modifier = Modifier.padding(20.dp, 20.dp, 0.dp, 0.dp)) {
+                    Card(modifier = Modifier.padding(20.dp, 20.dp, 0.dp, 0.dp).clickable(onClick = navigateToNext)) {
                         Image(
                             painter = painterResource(id = R.drawable.dumbbel),
                             contentDescription = null,

@@ -1,4 +1,4 @@
-package com.example.extra.ui.theme
+package com.example.extra.ui.Screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -27,25 +27,19 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.extra.R
 
 @Composable
-fun start() {
+fun start(navigateToNext: () -> Unit) {
     var isPlaying by rememberSaveable { mutableStateOf(false) }
     val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.hey))
     val progress by animateLottieCompositionAsState(composition)
 
 
-    Box(modifier = Modifier.background(Color.Black)) {
+    Box(modifier = Modifier.background(Color.Black))
+    {
 
-//        val progress by animateLottieCompositionAsState(
-//            composition,
-//            isPlaying = isPlaying
-//        )
-//        LottieAnimation(
-//            composition = composition,
-//            progress = { progress }, modifier = Modifier.clickable { isPlaying = !isPlaying }.fillMaxHeight(1f)
-//        )
         Column(
             modifier = Modifier
-                .padding(0.dp, 100.dp, 0.dp, 0.dp).align(Alignment.Center)
+                .padding(0.dp, 100.dp, 0.dp, 0.dp)
+                .align(Alignment.Center)
         ) {
             Image(
                 painter = painterResource(id = R.drawable.birds),
@@ -81,16 +75,25 @@ fun start() {
                     color = Color.Blue,
                     textAlign = TextAlign.Center,
                     modifier = Modifier
-                        .padding(6.dp, 0.dp)
+                        .padding(6.dp, 0.dp),
                 )
             }
-            Button(onClick = { /*TODO*/ },
+            Button(
+                onClick = navigateToNext,
                 modifier = Modifier
-                    .padding( 150.dp, 30.dp),
-                colors = ButtonDefaults.buttonColors( Color.Blue)) {
-                Text(text = "Let's Start",
-                    color = Color.White)
+                    .padding(150.dp, 30.dp),
+                colors = ButtonDefaults.buttonColors(Color.Blue)
+            ) {
+                Text(
+                    text = "Let's Start",
+                    color = Color.White
+                )
             }
         }
     }
 }
+
+private fun Any.navigate() {
+    TODO("Not yet implemented")
+}
+

@@ -1,7 +1,8 @@
-package com.example.extra.ui.theme
+package com.example.extra.ui.Screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -20,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import com.example.extra.R
 
 @Composable
-fun gender() {
+fun gender(navigateToNext: () -> Unit) {
     Box(modifier = Modifier.background(Color.Black)) {
         Column {
             Text(
@@ -34,13 +35,13 @@ fun gender() {
                 modifier = Modifier.padding(140.dp, 190.dp, 0.dp, 0.dp)
             )
             Row(modifier = Modifier.padding(45.dp, 40.dp, 0.dp, 0.dp)) {
-                Card(modifier = Modifier.padding(0.dp, 0.dp, 5.dp, 0.dp)) {
+                Card(modifier = Modifier.padding(0.dp, 0.dp, 5.dp, 0.dp).clickable (onClick = navigateToNext)) {
                     Image(
                         painter = painterResource(id = R.drawable.male), contentDescription = null,
                     )
 
                 }
-                Card(modifier = Modifier.padding(5.dp, 0.dp, 0.dp, 0.dp)) {
+                Card(modifier = Modifier.padding(5.dp, 0.dp, 0.dp, 0.dp).clickable (onClick = navigateToNext)) {
                     Image(
                         painter = painterResource(id = R.drawable.female),
                         contentDescription = null
@@ -58,7 +59,7 @@ fun gender() {
                 )
             }
             Button(
-                onClick = { /*TODO*/ },
+                onClick = navigateToNext,
                 modifier = Modifier
                     .padding(70.dp, 120.dp)
                     .height(35.dp)

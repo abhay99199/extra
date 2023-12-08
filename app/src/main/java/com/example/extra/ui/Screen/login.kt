@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.example.extra
+package com.example.extra.ui.Screen
 
 //import androidx.compose.foundation.gestures.ModifierLocalScrollableContainerProvider.value
 import androidx.compose.foundation.background
@@ -32,7 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun login()
+fun login(navigateToNext: () -> Unit)
 {
     var password by rememberSaveable { mutableStateOf("") }
     var value by remember { mutableStateOf("") }
@@ -40,7 +40,7 @@ fun login()
         Text(
             text = "LOGIN",
             modifier = Modifier
-                .padding(100.dp, 10.dp)
+                .padding(50.dp, 200.dp)
                 .rotate(90f),
             color = Color.White,
             fontSize = 90.sp
@@ -81,16 +81,15 @@ fun login()
                         .padding(0.dp, 30.dp, 0.dp, 0.dp),
                     color = Blue,
                 )
-                Button(onClick = { /*TODO*/ },
+                Button(onClick = navigateToNext,
                     modifier = Modifier
-                    .padding(50.dp, 21.dp, 0.dp, 0.dp),
+                    .padding(100.dp, 15.dp, 0.dp, 0.dp),
                     colors = ButtonDefaults.buttonColors( Color.Blue)) {
                     Text(text = "Login",
                         color = White)
                 }
             }
         }
-
     }
 }
 
