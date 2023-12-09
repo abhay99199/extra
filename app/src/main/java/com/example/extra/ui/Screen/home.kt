@@ -54,8 +54,11 @@ fun home(
                 modifier = Modifier.padding(10.dp, 0.dp)
             )
             Column {
-                Card(modifier = Modifier.padding(horizontal = 15.dp, vertical = 20.dp)
-                    .clickable(onClick = navigateToNext))
+                Card(
+                    modifier = Modifier
+                        .padding(horizontal = 15.dp, vertical = 20.dp)
+                        .clickable(onClick = navigateToNext)
+                )
                 {
                     Row {
                         Text(
@@ -71,7 +74,11 @@ fun home(
                         )
                     }
                 }
-                Card(modifier = Modifier.padding(horizontal = 15.dp, vertical = 0.dp).clickable(onClick = navigateToNext))
+                Card(
+                    modifier = Modifier
+                        .padding(horizontal = 15.dp, vertical = 0.dp)
+                        .clickable(onClick = navigateToNext)
+                )
                 {
                     Row {
                         Text(
@@ -88,7 +95,11 @@ fun home(
                     }
                 }
                 Row(modifier = Modifier.padding(7.dp, 0.dp)) {
-                    Card(modifier = Modifier.padding(10.dp, 20.dp, 0.dp, 0.dp).clickable(onClick = navigateToNext)) {
+                    Card(
+                        modifier = Modifier
+                            .padding(10.dp, 20.dp, 0.dp, 0.dp)
+                            .clickable(onClick = navigateToNext)
+                    ) {
                         Image(
                             painter = painterResource(id = R.drawable.dumbbel),
                             contentDescription = null,
@@ -101,7 +112,11 @@ fun home(
                                 .padding(60.dp, 5.dp)
                         )
                     }
-                    Card(modifier = Modifier.padding(20.dp, 20.dp, 0.dp, 0.dp).clickable(onClick = navigateToNext)) {
+                    Card(
+                        modifier = Modifier
+                            .padding(20.dp, 20.dp, 0.dp, 0.dp)
+                            .clickable(onClick = navigateToNext)
+                    ) {
                         Image(
                             painter = painterResource(id = R.drawable.yoga),
                             contentDescription = null,
@@ -117,7 +132,11 @@ fun home(
 
                 }
                 Row(modifier = Modifier.padding(7.dp, 0.dp)) {
-                    Card(modifier = Modifier.padding(10.dp, 20.dp, 0.dp, 0.dp).clickable(onClick = navigateToNext)) {
+                    Card(
+                        modifier = Modifier
+                            .padding(10.dp, 20.dp, 0.dp, 0.dp)
+                            .clickable(onClick = navigateToNext)
+                    ) {
                         Image(
                             painter = painterResource(id = R.drawable.focus),
                             contentDescription = null,
@@ -130,7 +149,11 @@ fun home(
                                 .padding(72.dp, 5.dp)
                         )
                     }
-                    Card(modifier = Modifier.padding(20.dp, 20.dp, 0.dp, 0.dp).clickable(onClick = navigateToNext)) {
+                    Card(
+                        modifier = Modifier
+                            .padding(20.dp, 20.dp, 0.dp, 0.dp)
+                            .clickable(onClick = navigateToNext)
+                    ) {
                         Image(
                             painter = painterResource(id = R.drawable.dumbbel),
                             contentDescription = null,
@@ -149,13 +172,17 @@ fun home(
                 bottomBar = {
                     BottomAppBar(
                         actions = {
-                            IconButton(onClick = { /* do something */ }) {
-                                Icon(Icons.Filled.Home, contentDescription = "Localized description")
-                            }
+
                             IconButton(onClick = { /* do something */ }) {
                                 Icon(
                                     Icons.Filled.ShoppingCart,
                                     contentDescription = "Localized description",
+                                )
+                            }
+                            IconButton(onClick = { /* do something */ }) {
+                                Icon(
+                                    Icons.Filled.Edit,
+                                    contentDescription = "Localized description"
                                 )
                             }
                             IconButton(onClick = { /* do something */ }) {
