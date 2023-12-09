@@ -175,13 +175,13 @@ fun home(
 
                             IconButton(onClick = { /* do something */ }) {
                                 Icon(
-                                    Icons.Filled.ShoppingCart,
+                                    Icons.Filled.Home,
                                     contentDescription = "Localized description",
                                 )
                             }
                             IconButton(onClick = { /* do something */ }) {
                                 Icon(
-                                    Icons.Filled.Edit,
+                                    Icons.Filled.ShoppingCart,
                                     contentDescription = "Localized description"
                                 )
                             }
