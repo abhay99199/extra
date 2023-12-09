@@ -65,11 +65,16 @@ dependencies {
     //viewmodel compose
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
     //navigation compose
-
     implementation("androidx.navigation:navigation-compose:2.7.5")
+    //gif compose
+    implementation("io.coil-kt:coil-compose:2.1.0")
+    implementation ("io.coil-kt:coil-gif:2.1.0")
+    // Glide
+    implementation("com.github.skydoves:landscapist-glide:1.3.7")
 
     implementation("com.airbnb.android:lottie-compose:6.1.0")
     implementation("androidx.navigation:navigation-runtime-ktx:2.7.5")
+    implementation("androidx.compose.animation:animation-graphics-android:1.5.4")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

@@ -25,6 +25,8 @@ class MainActivity : ComponentActivity() {
 //                    gender()
 //                    home()
                     MyNavigation()
+//                    measure()
+//                    CrossFit()
                 }
             }
         }

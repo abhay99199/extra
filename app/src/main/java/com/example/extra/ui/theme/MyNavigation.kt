@@ -11,11 +11,13 @@ import com.example.extra.ui.Screen.NextScreen
 import com.example.extra.ui.Screen.gender
 import com.example.extra.ui.Screen.home
 import com.example.extra.ui.Screen.login
+import com.example.extra.ui.Screen.measure
 import com.example.extra.ui.Screen.start
 import com.example.extra.ui.theme.MyViewModel
 
 enum class Screens {
     Main,
+    Measure,
     Gender,
     Login,
     Start,
@@ -45,6 +47,11 @@ fun MyNavigation(){
         }
         composable(Screens.Gender.name){
             gender {
+                navController.navigate(Screens.Measure.name)
+            }
+        }
+        composable(Screens.Measure.name){
+            measure {
                 navController.navigate(Screens.Main.name)
             }
         }
@@ -64,5 +71,7 @@ fun MyNavigation(){
         }
     }
 }
+
+
 
 
