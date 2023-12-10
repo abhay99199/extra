@@ -1,6 +1,7 @@
 package com.example.extra.ui.Screen
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -36,10 +37,7 @@ fun ListingScreen(
                     text = "Good morning", color = Color.White,
                     modifier = Modifier.padding(10.dp, 10.dp)
                 )
-                Text(
-                    text = "User", color = Color.White,
-                    modifier = Modifier.padding(10.dp, 0.dp)
-                )
+
             }
         }
         items(homescreen){ item ->
@@ -67,17 +65,24 @@ fun GymCard(item: Item, onClick: () -> Unit) {
             }
         )
     ) {
-        GlideImage(
-            model = item.img,
-            contentDescription = item.title,
-            contentScale = ContentScale.Crop,
-            modifier = Modifier.padding()
-        )
+        if (item.isImgLocal){
+            GlideImage(model = item.imgLocal,
+                contentDescription = item.title,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.height(250.dp)
+            )
+        }
+        else{
+            GlideImage(model = item.img,
+                contentDescription = item.title,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.height(250.dp)
+            )
+        }
         Column(modifier = Modifier.padding(16.dp)) {
             Text(text = item.title)
             Text(text = item.img, style = MaterialTheme.typography.bodySmall)
         }
-
 
     }
 

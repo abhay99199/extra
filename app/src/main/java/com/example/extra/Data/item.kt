@@ -9,5 +9,7 @@ enum class Screen{
 data class Item(
     val title: String,
     val img:String ="",
-    val priority: Screen=Screen.Low
+    val imgLocal:Int = 0,
+    val priority: Screen=Screen.Low,
+    val isImgLocal: Boolean = false,
 )

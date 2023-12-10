@@ -57,6 +57,8 @@ fun MyNavigation(){
             }
         }
         composable(Screens.Main.name){
+//            home{
+//                navController.navigate(Screens.Crossfit.name)
             home {
                when (it){
                    "crossfit" -> navController.navigate(Screens.Crossfit.name)
@@ -66,7 +68,7 @@ fun MyNavigation(){
 //                }
             }
         }
-        composable(Screens.Home.name){
+        composable(Screens.Crossfit.name){
             ListingScreen{
                 viewModel.onItemSelected(it)
                 navController.navigate(Screens.Detail.name)
