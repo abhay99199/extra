@@ -7,8 +7,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.example.extra.Data.CrossFit
 import com.example.extra.ui.theme.ExtraTheme
+import com.example.mywishlist.ui.theme.MyNavigation
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,9 +24,9 @@ class MainActivity : ComponentActivity() {
 //                    login()
 //                    gender()
 //                    home()
-//                    MyNavigation()
+                    MyNavigation()
 //                    measure()
-                    CrossFit()
+//                    CrossFit()
                 }
             }
         }

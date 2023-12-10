@@ -1,4 +1,4 @@
-package com.example.extra.Data
+package com.example.extra.ui.Screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.dp
 import com.example.extra.R
 
 @Composable
-fun CrossFit()
+fun CrossFit(navigateToNext: () -> Unit)
 {
     Box(modifier = Modifier.background(Color.Black))
     {
