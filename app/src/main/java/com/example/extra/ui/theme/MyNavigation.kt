@@ -22,7 +22,6 @@ enum class Screens {
     Gender,
     Login,
     Start,
-    Home,
     Detail
 }
 
