@@ -33,14 +33,7 @@ import com.example.extra.R
 
 @Composable
 fun home(
-    navigateToNext: () -> Unit,
-//    navigateToCrossFit: () -> Unit,
-//    navigateToGym: () -> Unit,
-//    navigateToDumbbell: () -> Unit,
-//    navigateToYoga: () -> Unit,
-//    navigateToFocus: () -> Unit,
-//    navigateToComingSoon: () -> Unit
-
+    navigateToNext: (ScreenName: String) -> Unit,
 ) {
     Box(modifier = Modifier.background(Color.Black))
     {
@@ -94,12 +87,16 @@ fun home(
             )
             { innerPadding ->
                 Text(
-                    modifier = Modifier.padding(innerPadding).padding(10.dp, 0.dp),
+                    modifier = Modifier
+                        .padding(innerPadding)
+                        .padding(10.dp, 0.dp),
                     text = "User"
                 )
                 Column {
-                    Card(modifier = Modifier.padding(horizontal = 15.dp, vertical = 20.dp)
-                        .clickable(onClick = navigateToNext))
+                    Card(modifier = Modifier
+                        .padding(horizontal = 15.dp, vertical = 20.dp)
+                        .clickable(onClick = { navigateToNext("crossfit") })
+                    )
                     {
                         Row {
                             Text(
@@ -115,7 +112,10 @@ fun home(
                             )
                         }
                     }
-                    Card(modifier = Modifier.padding(horizontal = 15.dp, vertical = 0.dp).clickable(onClick = navigateToNext))
+                    Card(
+                        modifier = Modifier
+                            .padding(horizontal = 15.dp, vertical = 0.dp)
+                            .clickable(onClick = { navigateToNext("gym") }))
                     {
                         Row {
                             Text(
@@ -132,7 +132,11 @@ fun home(
                         }
                     }
                     Row(modifier = Modifier.padding(7.dp, 0.dp)) {
-                        Card(modifier = Modifier.padding(10.dp, 20.dp, 0.dp, 0.dp).clickable(onClick = navigateToNext)) {
+                        Card(
+                            modifier = Modifier
+                                .padding(10.dp, 20.dp, 0.dp, 0.dp)
+                                .clickable(onClick ={ navigateToNext("dumbbell") })
+                        ) {
                             Image(
                                 painter = painterResource(id = R.drawable.dumbbel),
                                 contentDescription = null,
@@ -145,7 +149,11 @@ fun home(
                                     .padding(60.dp, 5.dp)
                             )
                         }
-                        Card(modifier = Modifier.padding(20.dp, 20.dp, 0.dp, 0.dp).clickable(onClick = navigateToNext)) {
+                        Card(
+                            modifier = Modifier
+                                .padding(20.dp, 20.dp, 0.dp, 0.dp)
+                                .clickable(onClick = { navigateToNext("Yoga") })
+                        ) {
                             Image(
                                 painter = painterResource(id = R.drawable.yoga),
                                 contentDescription = null,
@@ -161,7 +169,11 @@ fun home(
 
                     }
                     Row(modifier = Modifier.padding(7.dp, 0.dp)) {
-                        Card(modifier = Modifier.padding(10.dp, 20.dp, 0.dp, 0.dp).clickable(onClick = navigateToNext)) {
+                        Card(
+                            modifier = Modifier
+                                .padding(10.dp, 20.dp, 0.dp, 0.dp)
+                                .clickable(onClick = { navigateToNext("focus") })
+                        ) {
                             Image(
                                 painter = painterResource(id = R.drawable.focus),
                                 contentDescription = null,
@@ -174,7 +186,11 @@ fun home(
                                     .padding(72.dp, 5.dp)
                             )
                         }
-                        Card(modifier = Modifier.padding(20.dp, 20.dp, 0.dp, 0.dp).clickable(onClick = navigateToNext)) {
+                        Card(
+                            modifier = Modifier
+                                .padding(20.dp, 20.dp, 0.dp, 0.dp)
+                                .clickable(onClick = { navigateToNext("Coming Soon") })
+                        ) {
                             Image(
                                 painter = painterResource(id = R.drawable.dumbbel),
                                 contentDescription = null,

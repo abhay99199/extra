@@ -16,6 +16,7 @@ import com.example.extra.ui.Screen.start
 import com.example.extra.ui.theme.MyViewModel
 
 enum class Screens {
+    Crossfit,
     Main,
     Measure,
     Gender,
@@ -57,7 +58,12 @@ fun MyNavigation(){
         }
         composable(Screens.Main.name){
             home {
-                navController.navigate(Screens.Home.name)
+               when (it){
+                   "crossfit" -> navController.navigate(Screens.Crossfit.name)
+               }
+//                when (it){
+//                    "gym" -> navController.navigate(Screens.Crossfit.name)
+//                }
             }
         }
         composable(Screens.Home.name){
