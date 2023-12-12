@@ -19,14 +19,9 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
+
                 ) {
-//                    start()
-//                    login()
-//                    gender()
-//                    home()
                     MyNavigation()
-//                    measure()
-//                    CrossFit()
                 }
             }
         }

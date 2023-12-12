@@ -25,12 +25,17 @@ import com.example.extra.Data.Item
 
 @Composable
 fun ListingScreen(
+    modifier: Modifier = Modifier.background(Color(155,184,205)),
     onItemSelected: (Item) -> Unit,
 ) {
     val homescreen = FakeRepository().gethomeScreen()
-    LazyColumn(modifier = Modifier.padding(10.dp,0.dp).background(Color(155,184,205))){
-        item{
-            Column (modifier = Modifier.padding(15.dp,0.dp)){
+    LazyColumn(
+        modifier = Modifier
+            .padding(10.dp, 0.dp)
+            .background(Color(155, 184, 205))
+    ) {
+        item {
+            Column(modifier = Modifier.padding(15.dp, 0.dp)) {
                 val offset = Offset(5.0f, 10.0f)
                 Text(
                     text = "FitGenes", color = Color.White,
@@ -45,12 +50,11 @@ fun ListingScreen(
                 )
             }
         }
-        items(homescreen){ item ->
-            GymCard(item = item, onClick =  { onItemSelected(item) })
+        items(homescreen) { item ->
+            GymCard(item = item, onClick = { onItemSelected(item) })
         }
     }
 }
-
 
 
 fun onItemSelected(item: Item) {
@@ -62,24 +66,28 @@ fun onItemSelected(item: Item) {
 fun GymCard(item: Item, onClick: () -> Unit) {
     Card(
         onClick = onClick,
-        colors = CardDefaults.cardColors(),
-        modifier = Modifier.padding(0.dp,0.dp,0.dp,10.dp)
+        colors = CardDefaults.cardColors(Color.White),
+        modifier = Modifier.padding(0.dp, 0.dp, 0.dp, 10.dp),
     ) {
-        if (item.isImgLocal){
-            GlideImage(model = item.imgLocal,
+        if (item.isImgLocal) {
+            GlideImage(
+                model = item.imgLocal,
                 contentDescription = item.title,
-                modifier = Modifier.padding(110.dp,0.dp)
+                modifier = Modifier.padding(110.dp, 0.dp)
             )
-        }
-        else{
-            GlideImage(model = item.img,
+        } else {
+            GlideImage(
+                model = item.img,
                 contentDescription = item.title,
                 contentScale = ContentScale.Fit,
-                modifier = Modifier.padding(0.dp,10.dp,0.dp,0.dp)
+                modifier = Modifier.padding(0.dp, 10.dp, 0.dp, 0.dp)
             )
         }
-        Column(modifier = Modifier.padding(10.dp,10.dp,0.dp,10.dp)) {
-            Text(text = item.title)
+        Column(modifier = Modifier.padding(10.dp, 10.dp, 0.dp, 10.dp)) {
+            Text(
+                text = item.title,
+                color = Color(155, 184, 205)
+            )
         }
 
     }

@@ -14,6 +14,7 @@ import com.example.extra.ui.Screen.login
 import com.example.extra.ui.Screen.measure
 import com.example.extra.ui.Screen.start
 import com.example.extra.ui.theme.MyViewModel
+import logo
 
 enum class Screens {
     Crossfit,
@@ -22,7 +23,8 @@ enum class Screens {
     Gender,
     Login,
     Start,
-    Detail
+    Detail,
+    Logo
 }
 
 @Composable
@@ -34,7 +36,12 @@ fun MyNavigation(){
     //navigation logic
     val navController = rememberNavController()
     //navigation routes
-    NavHost(navController = navController, startDestination = Screens.Start.name){
+    NavHost(navController = navController, startDestination = Screens.Logo.name){
+        composable(Screens.Logo.name){
+            logo {
+                navController.navigate(Screens.Start.name)
+            }
+        }
         composable(Screens.Start.name){
             start {
                 navController.navigate(Screens.Login.name)

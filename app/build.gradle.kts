@@ -75,6 +75,7 @@ dependencies {
     implementation("com.airbnb.android:lottie-compose:6.1.0")
     implementation("androidx.navigation:navigation-runtime-ktx:2.7.5")
     implementation("androidx.compose.animation:animation-graphics-android:1.5.4")
+    implementation("com.google.android.engage:engage-core:1.3.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
