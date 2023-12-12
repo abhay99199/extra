@@ -6,10 +6,10 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.extra.ui.Screen.Home
 import com.example.extra.ui.Screen.ListingScreen
 import com.example.extra.ui.Screen.NextScreen
 import com.example.extra.ui.Screen.gender
-import com.example.extra.ui.Screen.home
 import com.example.extra.ui.Screen.login
 import com.example.extra.ui.Screen.measure
 import com.example.extra.ui.Screen.start
@@ -58,7 +58,7 @@ fun MyNavigation(){
         composable(Screens.Main.name){
 //            home{
 //                navController.navigate(Screens.Crossfit.name)
-            home {
+            Home {
                when (it){
                    "crossfit" -> navController.navigate(Screens.Crossfit.name)
                }

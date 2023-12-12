@@ -24,8 +24,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Color.Companion.Blue
 import androidx.compose.ui.graphics.Color.Companion.White
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
@@ -36,7 +36,7 @@ fun login(navigateToNext: () -> Unit)
 {
     var password by rememberSaveable { mutableStateOf("") }
     var value by remember { mutableStateOf("") }
-    Box(modifier = Modifier.background(Color.Black)) {
+    Box(modifier = Modifier.background(Color(155,184,205))) {
         Text(
             text = "LOGIN",
             modifier = Modifier
@@ -61,9 +61,10 @@ fun login(navigateToNext: () -> Unit)
                 onValueChange = { value = it },
                 label = { Text("Enter Email Id") },
                 maxLines = 2,
-//                textStyle = TextStyle(color = Color.Blue, fontWeight = FontWeight.Bold),
+                textStyle = TextStyle(color = Color(155,184,205)),
                 modifier = Modifier
                     .padding(0.dp, 290.dp, 0.dp, 0.dp)
+                    .background(Color(155, 184, 205))
             )
             TextField(
                 value = password,
@@ -79,14 +80,14 @@ fun login(navigateToNext: () -> Unit)
                     text = "Forget Password",
                     modifier = Modifier
                         .padding(0.dp, 30.dp, 0.dp, 0.dp),
-                    color = Blue,
+                    color = White,
                 )
                 Button(onClick = navigateToNext,
                     modifier = Modifier
                     .padding(100.dp, 15.dp, 0.dp, 0.dp),
-                    colors = ButtonDefaults.buttonColors( Color.Blue)) {
+                    colors = ButtonDefaults.buttonColors( Color.White)) {
                     Text(text = "Login",
-                        color = White)
+                        color = Color(155,184,205))
                 }
             }
         }

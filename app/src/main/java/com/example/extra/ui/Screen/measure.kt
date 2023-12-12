@@ -19,20 +19,31 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.extra.R
 
 @Composable
 fun measure(navigateToNext: () -> Unit){
     var sliderPositions by remember { mutableStateOf(0f) }
-    Box(modifier = Modifier.background(Color.Black)){
+    Box(modifier = Modifier.background(Color(155,184,205))){
         Column {
+            val offset = Offset(5.0f, 10.0f)
             Text(
-                text = "Logo name",
-                color = Color.White,
-                modifier = Modifier.padding(170.dp, 30.dp)
+                text = "FitGenes", color = Color.White,
+                modifier = Modifier.padding(170.dp, 5.dp),
+                style = TextStyle(
+                    fontSize = 22.sp,
+                    fontWeight = FontWeight.Bold,
+//                    shadow = Shadow(
+//                        color = Color.Black, offset =offset , blurRadius = 3f
+//                    )
+                )
             )
             Image(painter = painterResource(id = R.drawable.measure), contentDescription = null,
                 modifier = Modifier.padding(135.dp,80.dp))
@@ -61,11 +72,11 @@ fun measure(navigateToNext: () -> Unit){
                     .padding(70.dp, 160.dp,0.dp,0.dp)
                     .height(35.dp)
                     .width(270.dp),
-                colors = ButtonDefaults.buttonColors(Color.Blue)
+                colors = ButtonDefaults.buttonColors(Color.White)
             ) {
                 Text(
                     text = "Continue",
-                    color = Color.White
+                    color = Color(155,184,205)
                 )
             }
         }

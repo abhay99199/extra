@@ -12,72 +12,72 @@ class FakeRepository {
                 isImgLocal = true,
                 priority = Screen.High
             ),Item(
-                title = "Mountain Climber",
+                title = "Sit-Ups",
                 imgLocal = R.drawable.exersice_2,
                 isImgLocal = true,
                 priority = Screen.High
             ),Item(
-                title = "Mountain Climber",
+                title = "Tricep Dips",
                 imgLocal = R.drawable.exersice_3,
                 isImgLocal = true,
                 priority = Screen.High
             ),Item(
-                title = "Mountain Climber",
+                title = "Bicycle Crunches",
                 imgLocal = R.drawable.exersice_4,
                 isImgLocal = true,
                 priority = Screen.High
             ),Item(
-                title = "Mountain Climber",
+                title = "Legs Up the Wall pose",
                 imgLocal = R.drawable.exersice_5,
                 isImgLocal = true,
                 priority = Screen.High
             ),Item(
-                title = "Mountain Climber",
+                title = "Alternate Heel Touchers",
                 imgLocal = R.drawable.exersice_6,
                 isImgLocal = true,
                 priority = Screen.High
             ),Item(
-                title = "Mountain Climber",
+                title = "Crunch",
                 imgLocal = R.drawable.exersice_7,
                 isImgLocal = true,
                 priority = Screen.High
             ),Item(
-                title = "Mountain Climber",
+                title = "Sit Up on Bench",
                 imgLocal = R.drawable.exersice_8,
                 isImgLocal = true,
                 priority = Screen.High
             ),Item(
-                title = "Mountain Climber",
+                title = "Opposite hand to Opposite Foot Crunch",
                 imgLocal = R.drawable.exersice_9,
                 isImgLocal = true,
                 priority = Screen.High
             ),Item(
-                title = "Mountain Climber",
+                title = "Side Plank",
                 imgLocal = R.drawable.exersice_10,
                 isImgLocal = true,
                 priority = Screen.High
             ),Item(
-                title = "Mountain Climber",
+                title = "Alternate leg raises",
                 imgLocal = R.drawable.exersice_11,
                 isImgLocal = true,
                 priority = Screen.High
             ),Item(
-                title = "Mountain Climber",
+                title = "Twist",
                 imgLocal = R.drawable.exersice_12,
                 isImgLocal = true,
                 priority = Screen.High
             ),Item(
-                title = "Mountain Climber",
+                title = "Bridge",
                 imgLocal = R.drawable.exersice_13,
                 isImgLocal = true,
                 priority = Screen.High
             ),Item(
-                title = "Mountain Climber",
+                title = "V-Sit",
                 imgLocal = R.drawable.exersice_14,
                 isImgLocal = true,
                 priority = Screen.High
             ),Item(
-                title = "Mountain Climber",
+                title = "Arm touch to Foot",
                 imgLocal = R.drawable.exersice_15,
                 isImgLocal = true,
                 priority = Screen.High

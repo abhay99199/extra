@@ -33,7 +33,7 @@ fun start(navigateToNext: () -> Unit) {
     val progress by animateLottieCompositionAsState(composition)
 
 
-    Box(modifier = Modifier.background(Color.Black))
+    Box(modifier = Modifier.background(Color(155,184,205)))
     {
 
         Column(
@@ -72,7 +72,7 @@ fun start(navigateToNext: () -> Unit) {
                 )
                 Text(
                     text = "sign in",
-                    color = Color.Blue,
+                    color = Color.White,
                     textAlign = TextAlign.Center,
                     modifier = Modifier
                         .padding(6.dp, 0.dp),
@@ -82,11 +82,11 @@ fun start(navigateToNext: () -> Unit) {
                 onClick = navigateToNext,
                 modifier = Modifier
                     .padding(150.dp, 30.dp),
-                colors = ButtonDefaults.buttonColors(Color.Blue)
+                colors = ButtonDefaults.buttonColors(Color.White)
             ) {
                 Text(
                     text = "Let's Start",
-                    color = Color.White
+                    color = Color(155,184,205)
                 )
             }
         }

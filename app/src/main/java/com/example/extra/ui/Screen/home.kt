@@ -13,7 +13,6 @@ import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.BottomAppBar
-import androidx.compose.material3.BottomAppBarDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.FloatingActionButtonDefaults
@@ -25,62 +24,86 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.extra.R
 
 @Composable
-fun home(
+fun Home(
     navigateToNext: (ScreenName: String) -> Unit,
 ) {
-    Box(modifier = Modifier.background(Color.Black))
+    Box(modifier = Modifier.background(Color.White))
     {
         Column {
+            val offset = Offset(5.0f, 10.0f)
             Text(
-                text = "Logo name", color = Color.White,
-                modifier = Modifier.padding(170.dp, 10.dp)
+                text = "FitGenes", color = Color(155,184,205),
+                modifier = Modifier.padding(170.dp, 5.dp),
+                style = TextStyle(
+                    fontSize = 22.sp,
+                    fontWeight = FontWeight.Bold,
+//                    shadow = Shadow(
+//                        color = Color.Black, offset =offset , blurRadius = 3f
+//                    )
+                )
             )
             Text(
-                text = "Good morning", color = Color.White,
-                modifier = Modifier.padding(10.dp, 10.dp)
+                text = "Good morning", color =  Color(155,184,205),
+                modifier = Modifier.padding(10.dp, 5.dp),
+                style = TextStyle(
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
+//                    shadow = Shadow(
+//                        color = Color.Black, offset =offset , blurRadius = 3f
+//                    )
+                )
             )
 
 
             Scaffold(
+                containerColor = Color(155,184,205),
                 bottomBar = {
                     BottomAppBar(
+                        containerColor = Color.White,
                         actions = {
 
                             IconButton(onClick = { /* do something */ }) {
                                 Icon(
                                     Icons.Filled.Home,
                                     contentDescription = "Localized description",
+                                    tint = Color.Black
                                 )
                             }
                             IconButton(onClick = { /* do something */ }) {
                                 Icon(
                                     Icons.Filled.ShoppingCart,
-                                    contentDescription = "Localized description"
+                                    contentDescription = "Localized description",
+                                    tint = Color.Black
                                 )
                             }
                             IconButton(onClick = { /* do something */ }) {
                                 Icon(
                                     Icons.Filled.DateRange,
                                     contentDescription = "Localized description",
+                                    tint = Color.Black
                                 )
                             }
 
                         },
                         floatingActionButton = {
                             FloatingActionButton(
+                                contentColor = Color(155,184,205) ,
                                 onClick = { /* do something */ },
-                                containerColor = BottomAppBarDefaults.bottomAppBarFabColor,
                                 elevation = FloatingActionButtonDefaults.bottomAppBarFabElevation()
                             ) {
-                                Icon(Icons.Filled.AccountCircle, "Localized description")
+                                Icon(Icons.Filled.AccountCircle, "Localized description",
+                                    tint = Color.Black)
                             }
                         }
                     )
@@ -93,116 +116,153 @@ fun home(
                         .padding(10.dp, 0.dp),
                     text = ""
                 )
-                Column (modifier = Modifier.background(Color.Black)){
-                    Card(modifier = Modifier
+                Column(modifier = Modifier.background(Color(155,184,205))) {
+                    Card(
+                        modifier = Modifier
+                            .padding(15.dp, 11.dp)
 
-                        .clickable(onClick = { navigateToNext("crossfit") })
+                            .clickable(onClick = { navigateToNext("crossfit") })
                     )
                     {
-                        Row {
-//                            Text(
-//                                text = "CrossFit", color = Color.White,
-//                                modifier = Modifier.padding(50.dp, 50.dp, 0.dp, 0.dp),
-//                                fontSize = 20.sp
-//                            )
+                        Box {
+                            val image = painterResource(id = R.drawable.crossfit)
                             Image(
-                                painter = painterResource(id = R.drawable.crossfit1),
+                                painter = image,
                                 contentDescription = null, alignment = Alignment.BottomEnd,
-                                modifier = Modifier.padding(0.dp, 0.dp, 0.dp, 0.dp)
-                                    .alpha(0.5f),
-                                contentScale = ContentScale.Crop,
+                                modifier = Modifier.alpha(0.8f),
+                            )
+                            val offset = Offset(5.0f, 10.0f)
+                            Text(
+                                text = "CROSSFIT",
+                                color = Color.White,
+                                modifier = Modifier.align(Alignment.Center),
+                                style = TextStyle(
+                                    fontSize = 35.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    shadow = Shadow(
+                                        color = Color.Black, offset =offset , blurRadius = 3f
+                                    )
+                                )
                             )
                         }
                     }
                     Card(
                         modifier = Modifier
                             .padding(horizontal = 15.dp, vertical = 0.dp)
-                            .clickable(onClick = { navigateToNext("gym") }))
+                            .clickable(onClick = { navigateToNext("gym") })
+                    )
                     {
-                        Row {
-                            Text(
-                                text = "Gym", color = Color.White,
-                                modifier = Modifier.padding(50.dp, 50.dp, 0.dp, 0.dp),
-                                fontSize = 20.sp
-                            )
+                        Box {
                             Image(
                                 painter = painterResource(id = R.drawable.gym),
                                 contentDescription = null, alignment = Alignment.BottomEnd,
-                                modifier = Modifier.padding(195.dp, 15.dp, 30.dp, 15.dp),
-                                contentScale = ContentScale.Crop,
+                                modifier = Modifier.alpha(0.8f),
+                                )
+                            val offset = Offset(5.0f, 10.0f)
+                            Text(
+                                text = "GYM",
+                                color = Color.White,
+                                modifier = Modifier.align(Alignment.Center),
+                                style = TextStyle(
+                                    fontSize = 35.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    shadow = Shadow(
+                                        color = Color.Black, offset =offset , blurRadius = 3f
+                                    )
+                                )
                             )
                         }
                     }
                     Row(modifier = Modifier.padding(7.dp, 0.dp)) {
                         Card(
                             modifier = Modifier
-                                .padding(10.dp, 20.dp, 0.dp, 0.dp)
-                                .clickable(onClick ={ navigateToNext("dumbbell") })
+                                .padding(10.dp, 11.dp)
+                                .clickable(onClick = { navigateToNext("dumbbell") })
                         ) {
-                            Image(
-                                painter = painterResource(id = R.drawable.dumbbel),
-                                contentDescription = null,
-                                modifier = Modifier.padding(20.dp, 10.dp, 10.dp, 10.dp)
-                            )
-                            Text(
-                                text = "Dumbbell",
-                                color = Color.White,
-                                modifier = Modifier
-                                    .padding(60.dp, 5.dp)
-                            )
+                            Box() {
+                                Image(
+                                    painter = painterResource(id = R.drawable.dumbbell),
+                                    contentDescription = null,
+                                    modifier = Modifier.alpha(0.8f)
+                                )
+                                val offset = Offset(5.0f, 10.0f)
+                                Text(
+                                    text = "DUMBBELL",
+                                    color = Color.White,
+                                    modifier = Modifier.align(Alignment.Center),
+                                    style = TextStyle(
+                                        fontSize = 35.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        shadow = Shadow(
+                                            color = Color.Black, offset =offset , blurRadius = 3f
+                                        )
+                                    )
+                                )
+                            }
                         }
                         Card(
                             modifier = Modifier
-                                .padding(20.dp, 20.dp, 0.dp, 0.dp)
+                                .padding(11.dp, 11.dp)
                                 .clickable(onClick = { navigateToNext("Yoga") })
                         ) {
-                            Image(
-                                painter = painterResource(id = R.drawable.yoga),
-                                contentDescription = null,
-                                modifier = Modifier.padding(20.dp, 10.dp, 10.dp, 10.dp)
-                            )
-                            Text(
-                                text = "Yoga",
-                                color = Color.White,
-                                modifier = Modifier
-                                    .padding(75.dp, 5.dp)
-                            )
+                            Box() {
+                                Image(
+                                    painter = painterResource(id = R.drawable.yoga),
+                                    contentDescription = null,
+                                    modifier = Modifier.alpha(0.8f)
+                                )
+                                val offset = Offset(5.0f, 10.0f)
+                                Text(
+                                    text = "YOGA",
+                                    color = Color.White,
+                                    modifier = Modifier.align(Alignment.Center),
+                                    style = TextStyle(
+                                        fontSize = 35.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        shadow = Shadow(
+                                            color = Color.Black, offset =offset , blurRadius = 3f
+                                        )
+                                    )
+                                )
+                            }
                         }
 
                     }
                     Row(modifier = Modifier.padding(7.dp, 0.dp)) {
                         Card(
                             modifier = Modifier
-                                .padding(10.dp, 20.dp, 0.dp, 0.dp)
+                                .padding(10.dp, 0.dp)
                                 .clickable(onClick = { navigateToNext("focus") })
                         ) {
-                            Image(
-                                painter = painterResource(id = R.drawable.focus),
-                                contentDescription = null,
-                                modifier = Modifier.padding(20.dp, 10.dp, 10.dp, 10.dp)
-                            )
-                            Text(
-                                text = "Focus",
-                                color = Color.White,
-                                modifier = Modifier
-                                    .padding(72.dp, 5.dp)
-                            )
+                            Box() {
+                                Image(
+                                    painter = painterResource(id = R.drawable.music),
+                                    contentDescription = null,
+                                    modifier = Modifier.alpha(0.8f)
+                                )
+                                val offset = Offset(5.0f, 10.0f)
+                                Text(
+                                    text = "FOCUS",
+                                    color = Color.White,
+                                    modifier = Modifier.align(Alignment.Center),
+                                    style = TextStyle(
+                                        fontSize = 35.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        shadow = Shadow(
+                                            color = Color.Black, offset =offset , blurRadius = 3f
+                                        )
+                                    )
+                                )
+                            }
                         }
                         Card(
                             modifier = Modifier
-                                .padding(20.dp, 20.dp, 0.dp, 0.dp)
+                                .padding(11.dp, 0.dp)
                                 .clickable(onClick = { navigateToNext("Coming Soon") })
                         ) {
                             Image(
-                                painter = painterResource(id = R.drawable.dumbbel),
+                                painter = painterResource(id = R.drawable.coming),
                                 contentDescription = null,
-                                modifier = Modifier.padding(20.dp, 10.dp, 10.dp, 10.dp)
-                            )
-                            Text(
-                                text = "Coming Soon...",
-                                color = Color.White,
-                                modifier = Modifier
-                                    .padding(45.dp, 5.dp)
                             )
                         }
                     }

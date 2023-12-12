@@ -15,19 +15,30 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.extra.R
 
 @Composable
 fun gender(navigateToNext: () -> Unit) {
-    Box(modifier = Modifier.background(Color.Black)) {
+    Box(modifier = Modifier.background(Color(155,184,205))) {
         Column {
+            val offset = Offset(5.0f, 10.0f)
             Text(
-                text = "Logo name",
-                color = Color.White,
-                modifier = Modifier.padding(170.dp, 30.dp)
+                text = "FitGenes", color = Color.White,
+                modifier = Modifier.padding(170.dp, 5.dp),
+                style = TextStyle(
+                    fontSize = 22.sp,
+                    fontWeight = FontWeight.Bold,
+//                    shadow = Shadow(
+//                        color = Color.Black, offset =offset , blurRadius = 3f
+//                    )
+                )
             )
             Text(
                 text = "What's your Gender?",
@@ -35,13 +46,17 @@ fun gender(navigateToNext: () -> Unit) {
                 modifier = Modifier.padding(140.dp, 190.dp, 0.dp, 0.dp)
             )
             Row(modifier = Modifier.padding(45.dp, 40.dp, 0.dp, 0.dp)) {
-                Card(modifier = Modifier.padding(0.dp, 0.dp, 5.dp, 0.dp).clickable (onClick = navigateToNext)) {
+                Card(modifier = Modifier.padding(0.dp, 0.dp, 5.dp, 0.dp)
+                    .background(Color(155,184,205))
+                    .clickable (onClick = navigateToNext)) {
                     Image(
                         painter = painterResource(id = R.drawable.male), contentDescription = null,
                     )
 
                 }
-                Card(modifier = Modifier.padding(5.dp, 0.dp, 0.dp, 0.dp).clickable (onClick = navigateToNext)) {
+                Card(modifier = Modifier.padding(5.dp, 0.dp, 0.dp, 0.dp)
+                    .background(Color(155,184,205))
+                    .clickable (onClick = navigateToNext)) {
                     Image(
                         painter = painterResource(id = R.drawable.female),
                         contentDescription = null
@@ -64,11 +79,11 @@ fun gender(navigateToNext: () -> Unit) {
                     .padding(70.dp, 120.dp)
                     .height(35.dp)
                     .width(270.dp),
-                colors = ButtonDefaults.buttonColors(Color.Blue)
+                colors = ButtonDefaults.buttonColors(Color.White)
             ) {
                 Text(
                     text = "Continue",
-                    color = Color.White
+                    color = Color(155,184,205)
                 )
             }
         }
