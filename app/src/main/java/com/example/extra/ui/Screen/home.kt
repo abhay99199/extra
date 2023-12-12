@@ -24,6 +24,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -90,24 +91,25 @@ fun home(
                     modifier = Modifier
                         .padding(innerPadding)
                         .padding(10.dp, 0.dp),
-                    text = "User"
+                    text = ""
                 )
-                Column {
+                Column (modifier = Modifier.background(Color.Black)){
                     Card(modifier = Modifier
-                        .padding(horizontal = 15.dp, vertical = 20.dp)
+
                         .clickable(onClick = { navigateToNext("crossfit") })
                     )
                     {
                         Row {
-                            Text(
-                                text = "CrossFit", color = Color.White,
-                                modifier = Modifier.padding(50.dp, 50.dp, 0.dp, 0.dp),
-                                fontSize = 20.sp
-                            )
+//                            Text(
+//                                text = "CrossFit", color = Color.White,
+//                                modifier = Modifier.padding(50.dp, 50.dp, 0.dp, 0.dp),
+//                                fontSize = 20.sp
+//                            )
                             Image(
-                                painter = painterResource(id = R.drawable.crossfit),
+                                painter = painterResource(id = R.drawable.crossfit1),
                                 contentDescription = null, alignment = Alignment.BottomEnd,
-                                modifier = Modifier.padding(165.dp, 10.dp, 30.dp, 10.dp),
+                                modifier = Modifier.padding(0.dp, 0.dp, 0.dp, 0.dp)
+                                    .alpha(0.5f),
                                 contentScale = ContentScale.Crop,
                             )
                         }

@@ -30,11 +30,6 @@ fun ListingScreen(
                     text = "Logo name", color = Color.White,
                     modifier = Modifier.padding(170.dp, 10.dp)
                 )
-                Text(
-                    text = "Good morning", color = Color.White,
-                    modifier = Modifier.padding(10.dp, 10.dp)
-                )
-
             }
         }
         items(homescreen){ item ->
