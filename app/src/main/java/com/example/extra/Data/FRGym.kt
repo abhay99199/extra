@@ -2,41 +2,10 @@ package com.example.extra.Data
 
 import com.example.extra.R
 
-class FakeRepository {
-    fun gethomeScreen(): List<Item> {
+class FRGym {
+    fun getgymScreen(): List<Item> {
         return listOf(
-
             Item(
-                title = "Mountain Climber",
-                imgLocal = R.drawable.exersice_1,
-                isImgLocal = true,
-                priority = Screen.High
-            ),Item(
-                title = "Sit-Ups",
-                imgLocal = R.drawable.exersice_2,
-                isImgLocal = true,
-                priority = Screen.High
-            ),Item(
-                title = "Tricep Dips",
-                imgLocal = R.drawable.exersice_3,
-                isImgLocal = true,
-                priority = Screen.High
-            ),Item(
-                title = "Bicycle Crunches",
-                imgLocal = R.drawable.exersice_4,
-                isImgLocal = true,
-                priority = Screen.High
-            ),Item(
-                title = "Legs Up the Wall pose",
-                imgLocal = R.drawable.exersice_5,
-                isImgLocal = true,
-                priority = Screen.High
-            ),Item(
-                title = "Alternate Heel Touchers",
-                imgLocal = R.drawable.exersice_6,
-                isImgLocal = true,
-                priority = Screen.High
-            ),Item(
                 title = "Crunch",
                 imgLocal = R.drawable.exersice_7,
                 isImgLocal = true,

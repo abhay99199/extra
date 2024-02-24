@@ -32,17 +32,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
-import com.example.extra.Data.FakeRepositoryCrossfit
+import com.example.extra.Data.FakeRepoYoga
 import com.example.extra.Data.Item
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CrossFitScreen(
-    modifier: Modifier = Modifier.background(Color(155,184,205)),
+fun YogaScreen(
+    modifier: Modifier = Modifier.background(Color(155, 184, 205)),
     navigateToNext: (ScreenName: String) -> Unit,
 ) {
-    val crossfitcardscreen = FakeRepositoryCrossfit().getcrossfitScreen()
+    val yogacardscreen = FakeRepoYoga().getyogaScreen()
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior(rememberTopAppBarState())
 
 
@@ -57,13 +57,13 @@ fun CrossFitScreen(
                 ),
                 title = {
                     Text(
-                        "CrossFit",
+                        "Yoga",
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = { navigateToNext("hhome") }) {
+                    IconButton(onClick = {navigateToNext("hhome")}) {
                         Icon(
                             imageVector = Icons.Filled.ArrowBack,
                             contentDescription = "Localized description"
@@ -103,23 +103,21 @@ fun CrossFitScreen(
                     )
                 }
             }
-            items(crossfitcardscreen) { item ->
-                CrossFitCard(item = item, onClick = { navigateToNext(item.toString()) })
+            items(yogacardscreen) { item ->
+                YogaCard(item = item, onClick = { navigateToNext(item.toString()) })
             }
         }
     }
 }
 
 
-
-
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalGlideComposeApi::class)
+@OptIn(ExperimentalGlideComposeApi::class)
 @Composable
-fun CrossFitCard(item: Item, onClick: () -> Unit) {
+fun YogaCard(item: Item, onClick: () -> Unit){
     Card(
         onClick = onClick,
         colors = CardDefaults.cardColors(Color.White),
-        modifier = Modifier.padding(0.dp, 0.dp, 0.dp, 10.dp),
+        modifier = Modifier.padding(0.dp, 10.dp, 0.dp, 10.dp),
     ) {
         if (item.isImgLocal) {
             GlideImage(
@@ -140,8 +138,14 @@ fun CrossFitCard(item: Item, onClick: () -> Unit) {
                 text = item.title,
                 color = Color(155, 184, 205)
             )
+            Text(
+                text = item.min,
+                color = Color(155, 184, 205)
+            )
+            Text(
+                text = item.howto,
+                color = Color(155, 184, 205)
+            )
         }
-
     }
 }
-

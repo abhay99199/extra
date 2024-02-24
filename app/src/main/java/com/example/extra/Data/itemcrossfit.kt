@@ -12,4 +12,6 @@ data class Item(
     val imgLocal:Int = 0,
     val priority: Screen=Screen.Low,
     val isImgLocal: Boolean = false,
+    val min: String="",
+    val howto: String= "",
 )

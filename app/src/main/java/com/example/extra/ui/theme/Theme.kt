@@ -39,6 +39,7 @@ private val LightColorScheme = lightColorScheme(
 
 @Composable
 fun ExtraTheme(
+
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
@@ -61,6 +62,7 @@ fun ExtraTheme(
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
         }
     }
+
 
     MaterialTheme(
         colorScheme = colorScheme,

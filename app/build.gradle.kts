@@ -51,9 +51,9 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
-    implementation("androidx.activity:activity-compose:1.8.1")
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+    implementation("androidx.activity:activity-compose:1.8.2")
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
@@ -63,18 +63,22 @@ dependencies {
     //glide v4
     implementation ("com.github.bumptech.glide:compose:1.0.0-beta01")
     //viewmodel compose
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
     //navigation compose
-    implementation("androidx.navigation:navigation-compose:2.7.5")
+    implementation("androidx.navigation:navigation-compose:2.7.7")
     //gif compose
     implementation("io.coil-kt:coil-compose:2.1.0")
     implementation ("io.coil-kt:coil-gif:2.1.0")
     // Glide
     implementation("com.github.skydoves:landscapist-glide:1.3.7")
+    // Icon
+    implementation("androidx.compose.material:material-icons-extended:1.6.1")
+    //responsive size
+    implementation("androidx.compose.material3:material3-window-size-class:1.2.0")
 
     implementation("com.airbnb.android:lottie-compose:6.1.0")
-    implementation("androidx.navigation:navigation-runtime-ktx:2.7.5")
-    implementation("androidx.compose.animation:animation-graphics-android:1.5.4")
+    implementation("androidx.navigation:navigation-runtime-ktx:2.7.7")
+    implementation("androidx.compose.animation:animation-graphics-android:1.6.1")
     implementation("com.google.android.engage:engage-core:1.3.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

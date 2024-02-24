@@ -40,7 +40,7 @@ fun measure(navigateToNext: () -> Unit){
                 style = TextStyle(
                     fontSize = 22.sp,
                     fontWeight = FontWeight.Bold,
-//                    shadow = Shadow(
+//            z        shadow = Shadow(
 //                        color = Color.Black, offset =offset , blurRadius = 3f
 //                    )
                 )
