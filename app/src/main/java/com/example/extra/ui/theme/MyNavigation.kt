@@ -11,9 +11,13 @@ import com.example.extra.ui.Screen.CrossFitScreen
 import com.example.extra.ui.Screen.Home
 import com.example.extra.ui.Screen.NextScreen
 import com.example.extra.ui.Screen.PhaseOne
-import com.example.extra.ui.Screen.PhaseSecond
+import com.example.extra.ui.Screen.PhaseTwo
+import com.example.extra.ui.Screen.WeekEight
+import com.example.extra.ui.Screen.WeekFive
 import com.example.extra.ui.Screen.WeekOne
 import com.example.extra.ui.Screen.WeekProgramScreen
+import com.example.extra.ui.Screen.WeekSeven
+import com.example.extra.ui.Screen.WeekSix
 import com.example.extra.ui.Screen.Weekfour
 import com.example.extra.ui.Screen.Weekthree
 import com.example.extra.ui.Screen.Weektwo
@@ -26,6 +30,10 @@ import com.example.extra.ui.theme.MyViewModel
 import logo
 
 enum class Screens {
+    Week8,
+    Week7,
+    Week6,
+    Week5,
     Week4,
     Week3,
     Week2,
@@ -120,7 +128,7 @@ fun MyNavigation() {
         }
         composable(Screens.Phase1.name) {
             PhaseOne {
-                navController.navigate(Screens.Main.name)
+                navController.navigate(Screens.WeekProgram.name)
                 when (it) {
                     "WeekProgram" -> navController.navigate(Screens.WeekProgram.name)
                 }
@@ -140,7 +148,7 @@ fun MyNavigation() {
         }
         composable(Screens.Week1.name){
             WeekOne {
-                navController.navigate(Screens.Main.name)
+                navController.navigate(Screens.Phase1.name)
                 when (it) {
                     "phase1" -> navController.navigate(Screens.Phase1.name)
                 }
@@ -148,7 +156,7 @@ fun MyNavigation() {
         }
         composable(Screens.Week2.name){
             Weektwo {
-                navController.navigate(Screens.Main.name)
+                navController.navigate(Screens.Phase1.name)
                 when (it) {
                     "phase1" -> navController.navigate(Screens.Phase1.name)
                 }
@@ -156,7 +164,7 @@ fun MyNavigation() {
         }
         composable(Screens.Week3.name){
             Weekthree {
-                navController.navigate(Screens.Main.name)
+                navController.navigate(Screens.Phase1.name)
                 when (it) {
                     "phase1" -> navController.navigate(Screens.Phase1.name)
                 }
@@ -164,17 +172,61 @@ fun MyNavigation() {
         }
         composable(Screens.Week4.name){
             Weekfour {
-                navController.navigate(Screens.Main.name)
+                navController.navigate(Screens.Phase1.name)
                 when (it) {
                     "phase1" -> navController.navigate(Screens.Phase1.name)
                 }
             }
         }
         composable(Screens.Phase2.name) {
-            PhaseSecond {
-                navController.navigate(Screens.Main.name)
+            PhaseTwo {
+                navController.navigate(Screens.WeekProgram.name)
                 when (it) {
                     "WeekProgram" -> navController.navigate(Screens.WeekProgram.name)
+                }
+                when (it){
+                    "week5" -> navController.navigate(Screens.Week5.name)
+                }
+                when (it){
+                    "week6" -> navController.navigate(Screens.Week6.name)
+                }
+                when (it){
+                    "week7" -> navController.navigate(Screens.Week7.name)
+                }
+                when (it){
+                    "week8" -> navController.navigate(Screens.Week8.name)
+                }
+            }
+        }
+        composable(Screens.Week5.name){
+            WeekFive {
+                navController.navigate(Screens.Phase2.name)
+                when (it) {
+                    "phase2" -> navController.navigate(Screens.Phase2.name)
+                }
+            }
+        }
+        composable(Screens.Week6.name){
+            WeekSix {
+                navController.navigate(Screens.Phase2.name)
+                when (it) {
+                    "phase2" -> navController.navigate(Screens.Phase2.name)
+                }
+            }
+        }
+        composable(Screens.Week7.name){
+            WeekSeven {
+                navController.navigate(Screens.Phase2.name)
+                when (it) {
+                    "phase2" -> navController.navigate(Screens.Phase2.name)
+                }
+            }
+        }
+        composable(Screens.Week8.name){
+            WeekEight {
+                navController.navigate(Screens.Phase2.name)
+                when (it) {
+                    "phase2" -> navController.navigate(Screens.Phase2.name)
                 }
             }
         }

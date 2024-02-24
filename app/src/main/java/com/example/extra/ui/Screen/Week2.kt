@@ -270,6 +270,15 @@ fun Weektwo(modifier: Modifier = Modifier.background(Color(7, 15, 25)),
                     }
                 }
             }
+            Text(
+                text = "Upper Body Exercise",
+                modifier = Modifier.padding(10.dp, 15.dp, 0.dp, 0.dp),
+                color = Color(146, 144, 195),
+                style = TextStyle(
+                    fontSize = 22.sp,
+                    fontWeight = FontWeight.Bold
+                )
+            )
             Card(
                 modifier = Modifier
                     .padding(15.dp, 20.dp, 0.dp, 0.dp)
@@ -554,6 +563,489 @@ fun Weektwo(modifier: Modifier = Modifier.background(Color(7, 15, 25)),
                         "knees to the ground to reduce the amount of stress on your shoulders " +
                         "and back.",
                     modifier = Modifier.padding(10.dp,0.dp),)
+            }
+            Text(
+                text = "Lower Body Exercise",
+                modifier = Modifier.padding(10.dp, 15.dp, 0.dp, 0.dp),
+                color = Color(146, 144, 195),
+                style = TextStyle(
+                    fontSize = 22.sp,
+                    fontWeight = FontWeight.Bold
+                )
+            )
+            Card(
+                modifier = Modifier
+                    .padding(15.dp, 20.dp, 0.dp, 0.dp)
+                    .background(Color(7, 15, 25)),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(146, 144, 195)
+                )
+            )
+            {
+                Box {
+                    val image = painterResource(id = R.drawable.lowerbody1)
+                    Image(
+                        painter = image,
+                        contentDescription = null, alignment = Alignment.BottomEnd,
+                        modifier = Modifier.alpha(0.8f),
+                    )
+                }
+                Text(
+                    text = "4 Round of 18: Weighted Walking Lunges",
+                    modifier = Modifier.padding(10.dp, 10.dp),
+                    color = Color(7, 15, 43),
+                    style = TextStyle(
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+                Text(
+                    text = "Start standing upright with a dumbbell in each hand. Step forward " +
+                            "about one and a half the length of a walking stride, and begin " +
+                            "kneeling down so that your front leg reaches 90 degrees. Don’t let " +
+                            "your back knee hit the ground. Straighten back up to a standing " +
+                            "position by raising up and bringing your back leg to meet your front. " +
+                            "Repeat with the other leg. Both legs count as one repetition.",
+                    modifier = Modifier.padding(10.dp, 0.dp),
+                )
+            }
+            Card(
+                modifier = Modifier
+                    .padding(15.dp, 20.dp, 0.dp, 0.dp)
+                    .background(Color(7, 15, 25)),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(146, 144, 195)
+                )
+            )
+            {
+                Box {
+                    val image = painterResource(id = R.drawable.lowerbody2)
+                    Image(
+                        painter = image,
+                        contentDescription = null, alignment = Alignment.BottomEnd,
+                        modifier = Modifier.alpha(0.8f),
+                    )
+                }
+                Text(
+                    text = "4 Round of 8: Barbell Dead Lifts",
+                    modifier = Modifier.padding(10.dp, 10.dp),
+                    color = Color(7, 15, 43),
+                    style = TextStyle(
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+                Text(
+                    text = "Stand tall with a barbell on the floor in front of you, feet hip width " +
+                            "apart and toes pointed forward. Keep your back as straight as " +
+                            "possible and bend at the knees reaching down to grab the barbell. " +
+                            "This is the starting position. Grip the bar and push through your" +
+                            "legs. Keep your torso upright and return to a standing position while " +
+                            "pushing your chest out and squeezing your shoulder blades together. " +
+                            "Return to the starting position tapping the barbell on " +
+                            "the ground.",
+                    modifier = Modifier.padding(10.dp, 0.dp),
+                )
+            }
+            Card(
+                modifier = Modifier
+                    .padding(15.dp, 20.dp, 0.dp, 0.dp)
+                    .background(Color(7, 15, 25)),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(146, 144, 195)
+                )
+            )
+            {
+                Box {
+                    val image = painterResource(id = R.drawable.lowerbody3)
+                    Image(
+                        painter = image,
+                        contentDescription = null, alignment = Alignment.BottomEnd,
+                        modifier = Modifier.alpha(0.8f),
+                    )
+                }
+                Text(
+                    text = "4 Round of 10: Back Extensions",
+                    modifier = Modifier.padding(10.dp, 10.dp),
+                    color = Color(7, 15, 43),
+                    style = TextStyle(
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+                Text(
+                    text = "Position your body on a back extension machine so that you are " +
+                            "facing the ground with the padded support at hip bone height. You " +
+                            "should be able to bend forward to a 90 degree angle comfortably " +
+                            "so that the weight of your body is supported by your upper thighs " +
+                            "pressing against the pad. Hold a weight plate or two dumbbells " +
+                            "against your chest with both hands and slowly bend at the hip joint " +
+                            "until your upper body is at a 90 degree angle to your lower body. " +
+                            "Contract your hamstrings and glutes to pull your upper body back to " +
+                            "a straight position. If possible, position the back extension machine " +
+                            "so that you are sideways to a mirror and can view your form to be " +
+                            "sure you are not overextending your lower back. You want to return " +
+                            "only to a neutral spine, and no farther.",
+                    modifier = Modifier.padding(10.dp, 0.dp),
+                )
+            }
+            Card(
+                modifier = Modifier
+                    .padding(15.dp, 20.dp, 0.dp, 0.dp)
+                    .background(Color(7, 15, 25)),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(146, 144, 195)
+                )
+            )
+            {
+                Box {
+                    val image = painterResource(id = R.drawable.lowerbody4)
+                    Image(
+                        painter = image,
+                        contentDescription = null, alignment = Alignment.BottomEnd,
+                        modifier = Modifier.alpha(0.8f),
+                    )
+                }
+                Text(
+                    text = "4 Round of 10: Dumbbell Sumo Squats",
+                    modifier = Modifier.padding(10.dp, 10.dp),
+                    color = Color(7, 15, 43),
+                    style = TextStyle(
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+                Text(
+                    text = "Stand with feet more than shoulder width apart, toes pointed out. " +
+                            "Hold a dumbbell by the base and begin to squat down, keeping chest " +
+                            "out and torso upright until thighs are parallel with the floor. Push up " +
+                            "through your heels to return to standing. Squeeze glutes at the end " +
+                            "and repeat.",
+                    modifier = Modifier.padding(10.dp, 0.dp),
+                )
+            }
+            Card(
+                modifier = Modifier
+                    .padding(15.dp, 20.dp, 0.dp, 0.dp)
+                    .background(Color(7, 15, 25)),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(146, 144, 195)
+                )
+            )
+            {
+                Box {
+                    val image = painterResource(id = R.drawable.lowerbody5)
+                    Image(
+                        painter = image,
+                        contentDescription = null, alignment = Alignment.BottomEnd,
+                        modifier = Modifier.alpha(0.8f),
+                    )
+                }
+                Text(
+                    text = "4 Round of 10: Leg Extensions",
+                    modifier = Modifier.padding(10.dp, 10.dp),
+                    color = Color(7, 15, 43),
+                    style = TextStyle(
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+                Text(
+                    text = "Lie on a hamstring curl machine, or an upright sitting hamstring " +
+                            "curl machine. Contract hamstrings and glutes to pull heels toward " +
+                            "your glutes and hold for a moment, squeezing glutes before slowly " +
+                            "extending legs to a near straight position again. Do not let legs " +
+                            "overextend. Keep tension on hamstrings the whole time.",
+                    modifier = Modifier.padding(10.dp, 0.dp),
+                )
+            }
+            Card(
+                modifier = Modifier
+                    .padding(15.dp, 20.dp, 0.dp, 0.dp)
+                    .background(Color(7, 15, 25)),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(146, 144, 195)
+                )
+            )
+            {
+                Box {
+                    val image = painterResource(id = R.drawable.lowerbody6)
+                    Image(
+                        painter = image,
+                        contentDescription = null, alignment = Alignment.BottomEnd,
+                        modifier = Modifier.alpha(0.8f),
+                    )
+                }
+                Text(
+                    text = "4 Round of 10: Hamstring Curls",
+                    modifier = Modifier.padding(10.dp, 10.dp),
+                    color = Color(7, 15, 43),
+                    style = TextStyle(
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+                Text(
+                    text = "Lie on a hamstring curl machine, or an upright sitting hamstring " +
+                            "curl machine. Contract hamstrings and glutes to pull heels toward " +
+                            "your glutes and hold for a moment, squeezing glutes before slowly " +
+                            "extending legs to a near straight position again. Do not let legs " +
+                            "overextend. Keep tension on hamstrings the whole time.",
+                    modifier = Modifier.padding(10.dp, 0.dp),
+                )
+            }
+            Card(
+                modifier = Modifier
+                    .padding(15.dp, 20.dp, 0.dp, 0.dp)
+                    .background(Color(7, 15, 25)),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(146, 144, 195)
+                )
+            )
+            {
+                Box {
+                    val image = painterResource(id = R.drawable.lowerbody7)
+                    Image(
+                        painter = image,
+                        contentDescription = null, alignment = Alignment.BottomEnd,
+                        modifier = Modifier.alpha(0.8f),
+                    )
+                }
+                Text(
+                    text = "4 Round of 10: Leg Press",
+                    modifier = Modifier.padding(10.dp, 10.dp),
+                    color = Color(7, 15, 43),
+                    style = TextStyle(
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+                Text(
+                    text = "Sit with feet on press plate hip width apart, toes pointed straight " +
+                            "forward. Push with feet, squeezing glutes until legs are almost " +
+                            "straight. Pause one moment and then reverse the motion slowly " +
+                            "bending legs back to starting position. Keep tension on your legs the " +
+                            "whole time so that when you return to the beginning of the exercise " +
+                            "there is no rest between repetitions.",
+                    modifier = Modifier.padding(10.dp, 0.dp),
+                )
+            }
+            Text(
+                text = "Abs Workout",
+                modifier = Modifier.padding(10.dp, 15.dp, 0.dp, 0.dp),
+                color = Color(146, 144, 195),
+                style = TextStyle(
+                    fontSize = 22.sp,
+                    fontWeight = FontWeight.Bold
+                )
+            )
+            Card(
+                modifier = Modifier
+                    .padding(15.dp, 20.dp, 0.dp, 0.dp)
+                    .background(Color(7, 15, 25)),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(146, 144, 195)
+                )
+            )
+            {
+                Box {
+                    val image = painterResource(id = R.drawable.abs1)
+                    Image(
+                        painter = image,
+                        contentDescription = null, alignment = Alignment.BottomEnd,
+                        modifier = Modifier.alpha(0.8f),
+                    )
+                }
+                Text(
+                    text = "4 Round of 10: Bicycles",
+                    modifier = Modifier.padding(10.dp, 10.dp),
+                    color = Color(7, 15, 43),
+                    style = TextStyle(
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+                Text(
+                    text = "Lie on your back and bring both knees up so legs are at a 90 degree " +
+                            "angle. Place hands behind head and extend your right leg straight " +
+                            "out while simultaneously crunching up to bring the elbow of the right " +
+                            "elbow toward the left knee. Repeat on the opposite side. This counts " +
+                            "as one repetition.",
+                    modifier = Modifier.padding(10.dp, 0.dp),
+                )
+            }
+            Card(
+                modifier = Modifier
+                    .padding(15.dp, 20.dp, 0.dp, 0.dp)
+                    .background(Color(7, 15, 25)),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(146, 144, 195)
+                )
+            )
+            {
+                Box {
+                    val image = painterResource(id = R.drawable.abs2)
+                    Image(
+                        painter = image,
+                        contentDescription = null, alignment = Alignment.BottomEnd,
+                        modifier = Modifier.alpha(0.8f),
+                    )
+                }
+                Text(
+                    text = "4 Round of 20:Dumbbell Side Bends ",
+                    modifier = Modifier.padding(10.dp, 10.dp),
+                    color = Color(7, 15, 43),
+                    style = TextStyle(
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+                Text(
+                    text = "Hold a dumbbell in each hand with arms extended down by your hips. " +
+                            "Slowly bend at the waist toward the left dumbbell and repeat on the " +
+                            "other side",
+                    modifier = Modifier.padding(10.dp, 0.dp),
+                )
+            }
+            Card(
+                modifier = Modifier
+                    .padding(15.dp, 20.dp, 0.dp, 0.dp)
+                    .background(Color(7, 15, 25)),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(146, 144, 195)
+                )
+            )
+            {
+                Box {
+                    val image = painterResource(id = R.drawable.abs3)
+                    Image(
+                        painter = image,
+                        contentDescription = null, alignment = Alignment.BottomEnd,
+                        modifier = Modifier.alpha(0.8f),
+                    )
+                }
+                Text(
+                    text = "4 Round of 10: Leg Lifts",
+                    modifier = Modifier.padding(10.dp, 10.dp),
+                    color = Color(7, 15, 43),
+                    style = TextStyle(
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+                Text(
+                    text = "Lie on your back with hands wedged under your lower back for " +
+                            "support. Lift legs straight into the air so your body is at a 90 degree " +
+                            "angle, with the bottom of your feet facing the ceiling. Slowly lower " +
+                            "feet toward the ground, stopping before your lower back begins to " +
+                            "arch. Pull belly button toward spine to tighten abs and bring the legs " +
+                            "back up to an upright position.",
+                    modifier = Modifier.padding(10.dp, 0.dp),
+                )
+            }
+            Card(
+                modifier = Modifier
+                    .padding(15.dp, 20.dp, 0.dp, 0.dp)
+                    .background(Color(7, 15, 25)),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(146, 144, 195)
+                )
+            )
+            {
+                Box {
+                    val image = painterResource(id = R.drawable.abs4)
+                    Image(
+                        painter = image,
+                        contentDescription = null, alignment = Alignment.BottomEnd,
+                        modifier = Modifier.alpha(0.8f),
+                    )
+                }
+                Text(
+                    text = "4 Round of 10: Incline Sit-Ups",
+                    modifier = Modifier.padding(10.dp, 10.dp),
+                    color = Color(7, 15, 43),
+                    style = TextStyle(
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+                Text(
+                    text = "Find an incline bench and hook your feet up under the roller pads. Lie " +
+                            "down on the bench with your arms crossed over your chest so that " +
+                            "your hands are palm down near each shoulder. Pull your upper body " +
+                            "up into a seated position by contracting your abs, and immediately " +
+                            "lower back down slowly.",
+                    modifier = Modifier.padding(10.dp, 0.dp),
+                )
+            }
+            Card(
+                modifier = Modifier
+                    .padding(15.dp, 20.dp, 0.dp, 0.dp)
+                    .background(Color(7, 15, 25)),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(146, 144, 195)
+                )
+            )
+            {
+                Box {
+                    val image = painterResource(id = R.drawable.abs5)
+                    Image(
+                        painter = image,
+                        contentDescription = null, alignment = Alignment.BottomEnd,
+                        modifier = Modifier.alpha(0.8f),
+                    )
+                }
+                Text(
+                    text = "4 Round of 25: Excercise Ball Crunches",
+                    modifier = Modifier.padding(10.dp, 10.dp),
+                    color = Color(7, 15, 43),
+                    style = TextStyle(
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+                Text(
+                    text = "Lie on an exercise ball with your lower back supported by the ball. " +
+                            "Place hands behind head and crunch up creating a hollow shape with " +
+                            "your abdomen. Repeat for a count of 25.",
+                    modifier = Modifier.padding(10.dp, 0.dp),
+                )
+            }
+            Card(
+                modifier = Modifier
+                    .padding(15.dp, 20.dp, 0.dp, 0.dp)
+                    .background(Color(7, 15, 25)),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(146, 144, 195)
+                )
+            )
+            {
+                Box {
+                    val image = painterResource(id = R.drawable.abs6)
+                    Image(
+                        painter = image,
+                        contentDescription = null, alignment = Alignment.BottomEnd,
+                        modifier = Modifier.alpha(0.8f),
+                    )
+                }
+                Text(
+                    text = "4 Round of 10: Exercise Ball Pikes",
+                    modifier = Modifier.padding(10.dp, 10.dp),
+                    color = Color(7, 15, 43),
+                    style = TextStyle(
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+                Text(
+                    text = "From the start of a push-up position in a high plank, bring the front " +
+                            "of the shins up to rest on the top of an exercise ball. Bring the hips " +
+                            "up toward the ceiling so that the ball rolls forward toward your chest " +
+                            "and you end with your body in an upside down “V” position with the " +
+                            "tops of your feet resting on the ball. Slowly lower down to a straight " +
+                            "plank position.",
+                    modifier = Modifier.padding(10.dp, 0.dp),
+                )
             }
         }
     }

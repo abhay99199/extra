@@ -31,11 +31,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-@OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun WeekSeven (modifier: Modifier = Modifier.background(Color(7, 15, 25)),
-               navigateToNext: (ScreenName: String) -> Unit,
+fun WeekSix(modifier: Modifier = Modifier.background(Color(7, 15, 25)),
+            navigateToNext: (ScreenName: String) -> Unit,
 ) {
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior(rememberTopAppBarState())
 
@@ -49,7 +49,7 @@ fun WeekSeven (modifier: Modifier = Modifier.background(Color(7, 15, 25)),
                 ),
                 title = {
                     Text(
-                        "Week 7",
+                        "Week 6",
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
@@ -122,7 +122,7 @@ fun WeekSeven (modifier: Modifier = Modifier.background(Color(7, 15, 25)),
                     )
                     Row {
                         Text(
-                            text = "Circuit 4",
+                            text = "Circuit 3",
                             modifier = Modifier
                                 .padding(10.dp, 10.dp, 10.dp, 10.dp),
                         )
@@ -148,7 +148,7 @@ fun WeekSeven (modifier: Modifier = Modifier.background(Color(7, 15, 25)),
                     )
                     Row {
                         Text(
-                            text = "Circuit 3",
+                            text = "Rest",
                             modifier = Modifier
                                 .padding(10.dp, 10.dp, 10.dp, 10.dp),
                         )
@@ -176,7 +176,7 @@ fun WeekSeven (modifier: Modifier = Modifier.background(Color(7, 15, 25)),
                     )
                     Row {
                         Text(
-                            text = "Rest",
+                            text = "Circuit 1",
                             modifier = Modifier
                                 .padding(10.dp, 10.dp, 10.dp, 10.dp),
                         )
@@ -228,7 +228,7 @@ fun WeekSeven (modifier: Modifier = Modifier.background(Color(7, 15, 25)),
                     )
                     Row {
                         Text(
-                            text = "Circuit 1",
+                            text = "Circuit 2",
                             modifier = Modifier
                                 .padding(10.dp, 10.dp, 10.dp, 10.dp),
                         )
@@ -256,7 +256,7 @@ fun WeekSeven (modifier: Modifier = Modifier.background(Color(7, 15, 25)),
                     )
                     Row {
                         Text(
-                            text = "Circuit 1",
+                            text = "Circuit 4",
                             textAlign = TextAlign.Center,
                             modifier = Modifier
                                 .padding(10.dp, 10.dp, 10.dp, 10.dp),
