@@ -7,7 +7,9 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.extra.Data.Song
 import com.example.extra.ui.Screen.CrossFitScreen
+import com.example.extra.ui.Screen.FocusScreen
 import com.example.extra.ui.Screen.Home
 import com.example.extra.ui.Screen.NextScreen
 import com.example.extra.ui.Screen.PhaseOne
@@ -40,6 +42,7 @@ enum class Screens {
     Week1,
     Phase2,
     Phase1,
+    Focus,
     Yoga,
     WeekProgram,
     Crossfit,
@@ -101,8 +104,12 @@ fun MyNavigation() {
                 when (it) {
                     "yoga" -> navController.navigate(Screens.Yoga.name)
                 }
+                when (it) {
+                    "focus" -> navController.navigate(Screens.Focus.name)
+                }
             }
         }
+
         composable(Screens.Yoga.name) {
             YogaScreen {
                 navController.navigate(Screens.Main.name)
@@ -230,6 +237,11 @@ fun MyNavigation() {
                 }
             }
         }
+        composable(Screens.Focus.name) {
+            FocusScreen(navigateToNext = { navController.navigate(Screens.Main.name) },
+                songsList = List<Song>()
+            )
+        }
         composable(Screens.Crossfit.name) {
             CrossFitScreen {
                 navController.navigate(Screens.Detail.name)
@@ -244,6 +256,14 @@ fun MyNavigation() {
 
     }
 }
+
+fun <T> List(): List<T> {
+    TODO("Not yet implemented")
+}
+
+
+
+
 
 
 

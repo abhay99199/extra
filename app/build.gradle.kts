@@ -75,6 +75,8 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended:1.6.1")
     //responsive size
     implementation("androidx.compose.material3:material3-window-size-class:1.2.0")
+    //coil
+    implementation("io.coil-kt:coil-compose:2.2.2")
 
     implementation("com.airbnb.android:lottie-compose:6.1.0")
     implementation("androidx.navigation:navigation-runtime-ktx:2.7.7")
